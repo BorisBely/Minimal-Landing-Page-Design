@@ -1,0 +1,87 @@
+/*************** HERO ***************/
+.hero {
+  padding: 95px 0;
+  background: #f5f7f9;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 34px;
+}
+
+/* Лэйаут 2 колонки */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 70px;
+  align-items: center;
+}
+
+/*************** TEXT ***************/
+.hero-title {
+  font-size: 54px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.hero-subtitle {
+  font-size: 54px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.hero-subtitle .accent {
+  color: #34b53a;
+}
+
+.hero-lead {
+  font-size: 17px;
+  color: #646464;
+  max-width: 460px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+/*************** BUTTON ***************/
+.btn-primary {
+  background: #34b53a;
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/*************** IMAGE ***************/
+.hero-illustration img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+}
+
+/*************** MOBILE ***************/
+@media (max-width: 820px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .hero {
+    padding: 60px 0;
+  }
+  .hero-title {
+    font-size: 38px;
+  }
+  .hero-subtitle {
+    font-size: 38px;
+  }
+  .hero-illustration {
+    display: flex;
+    justify-content: center;
+  }
+}

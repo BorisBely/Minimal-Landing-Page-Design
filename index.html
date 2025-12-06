@@ -4,40 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="stylesheet" href="./css/stylereset.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/hero.css" />
     <link rel="stylesheet" href="./css/othersections.css" />
     <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/footerA.css" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
     />
   </head>
+
   <body>
-    <div class="header">
+    <header class="header">
       <div class="main-header">
+        <!-- LOGO -->
         <div class="logo">
-          <img src="./resources/Icon.svg" />
+          <img src="./resources/Icon.svg" alt="Nexcent logo" />
           <span>Nexcent</span>
         </div>
-        <div class="hamburger"><i class="ri-menu-line"></i></div>
+
+        <!-- CENTER MENU -->
+        <nav class="nav-wrap" aria-label="Main navigation">
+          <ul class="nav">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">Features</a></li>
+            <li class="nav-item"><a href="#">Community</a></li>
+            <li class="nav-item"><a href="#">Blog</a></li>
+            <li class="nav-item"><a href="#">Pricing</a></li>
+          </ul>
+        </nav>
+
+        <!-- RIGHT (BUTTON + BURGER) -->
+        <div class="header-actions">
+          <a class="btn-register" href="#">Register Now →</a>
+
+          <button
+            class="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
       </div>
 
-      <ul class="nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Pricing</a></li>
-      </ul>
-    </div>
+      <!-- MOBILE DROPDOWN -->
+      <div class="mobile-nav" aria-hidden="true">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a class="btn-register mobile" href="#">Register Now →</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Lessons and Insights</h1>
+          <h2 class="hero-subtitle">
+            from <span class="accent">8 years</span>
+          </h2>
+          <p class="hero-lead">
+            where to grow your business as a photographer: site or social media?
+          </p>
+          <a class="btn btn-primary" href="#">Register</a>
+        </div>
+
+        <div class="hero-illustration">
+          <img src="./resources/illustration.svg" alt="Illustration" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SCRIPT FULL -->
     <script>
-      document.querySelector(".hamburger").onclick = () => {
-        document.querySelector(".nav").classList.toggle("open");
-      };
+      const btn = document.querySelector(".hamburger");
+      const mobileNav = document.querySelector(".mobile-nav");
+
+      btn.addEventListener("click", () => {
+        const isOpen = mobileNav.classList.contains("open");
+
+        if (!isOpen) {
+          mobileNav.classList.add("open");
+          mobileNav.style.maxHeight = mobileNav.scrollHeight + "px"; // плавное открытие
+          btn.setAttribute("aria-expanded", "true");
+          mobileNav.setAttribute("aria-hidden", "false");
+        } else {
+          mobileNav.style.maxHeight = "0px"; // плавное закрытие
+          mobileNav.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+          mobileNav.setAttribute("aria-hidden", "true");
+        }
+      });
     </script>
   </body>
 </html>
