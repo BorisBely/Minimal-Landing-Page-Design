@@ -10,10 +10,10 @@
   padding: 0 34px;
 }
 
-/* Лэйаут 2 колонки */
+/* --- GRID --- */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 500px;
+  grid-template-columns: 1fr 420px; /* было 500px — уменьшаем */
   gap: 70px;
   align-items: center;
 }
@@ -41,7 +41,7 @@
 .hero-lead {
   font-size: 17px;
   color: #646464;
-  max-width: 460px;
+  max-width: 700px;
   line-height: 1.8;
   margin-bottom: 28px;
 }
@@ -58,9 +58,15 @@
 }
 
 /*************** IMAGE ***************/
+.hero-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-illustration img {
   width: 100%;
-  max-width: 500px;
+  max-width: 380px; /* ключевое — регулирует размер */
   display: block;
 }
 
@@ -71,17 +77,17 @@
     gap: 30px;
     text-align: center;
   }
+
   .hero {
     padding: 60px 0;
   }
-  .hero-title {
-    font-size: 38px;
-  }
+
+  .hero-title,
   .hero-subtitle {
     font-size: 38px;
   }
-  .hero-illustration {
-    display: flex;
-    justify-content: center;
+
+  .hero-illustration img {
+    max-width: 300px; /* меньше на телефонах */
   }
 }
