@@ -158,27 +158,119 @@
         <a class="btn btn-primary" href="#">Learn More</a>
       </div>
     </section>
+    <div class="separator"></div>
 
+    <section class="stats">
+      <div class="stats-first">
+        <h3>Helping a local <span>business reinvent itself</span></h3>
+        <p>
+          We reached here with our hard work and dedication. Our community and
+          growth are results of a collaborative effort.
+        </p>
+      </div>
+
+      <div class="stats-second">
+        <div class="stat">
+          <img src="./resources/Icon-3.svg" alt="icon" />
+          <div>
+            <h4>2,245,341</h4>
+            <p>Members</p>
+          </div>
+        </div>
+
+        <div class="stat">
+          <img src="./resources/Icon-4.svg" alt="icon" />
+          <div>
+            <h4>828,867</h4>
+            <p>Event Bookings</p>
+          </div>
+        </div>
+
+        <div class="stat">
+          <img src="./resources/communitiesthird.svg" alt="icon" />
+          <div>
+            <h4>46,328</h4>
+            <p>Clubs</p>
+          </div>
+        </div>
+
+        <div class="stat">
+          <img src="./resources/Icon-5.svg" alt="icon" />
+          <div>
+            <h4>1,926,436</h4>
+            <p>Payments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SAME SECTION -->
+    <section class="same-section">
+      <div class="same-section-img">
+        <img src="./resources/samesection2.svg" alt="Feature Illustration" />
+      </div>
+      <div class="same-section-content">
+        <h3>How to design your site footer like we did</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sint
+          enim temporibus ducimus impedit sed dolorem nihil tempore, neque
+          tempora! Veniam esse incidunt sint sapiente culpa, vitae ea corrupti
+          velit tempore aspernatur placeat obcaecati sed!
+        </p>
+        <a class="btn btn-primary" href="#">Learn More</a>
+      </div>
+    </section>
+    <div class="separator"></div>
+    <!-- ===== MARKETING SECTION ===== -->
+    <section class="marketing">
+      <div class="marketing-content">
+        <h3 class="section-title">Caring is the new marketing</h3>
+        <p class="section-subtitle">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          similique mollitia veritatis quia asperiores nam aut nulla suscipit
+          laudantium saepe nesciunt sunt deserunt aliquid delectus atque, qui,
+          repudiandae recusandae. Explicabo minus rem repellendus sit fuga.
+        </p>
+      </div>
+
+      <div class="marketing-cards">
+        <!-- Card #1 -->
+        <div class="marketing-card">
+          <img src="./resources/image 18.svg" alt="Marketing Strategy" />
+          <div class="marketing-card-content">
+            <h4>Marketing Strategy</h4>
+            <p>Targeted campaigns designed to boost reach and conversions.</p>
+            <a href="#" class="read-more">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- Card #2 -->
+        <div class="marketing-card">
+          <img src="./resources/image 19.svg" alt="Digital Growth" />
+          <div class="marketing-card-content">
+            <h4>Digital Growth</h4>
+            <p>Optimize channels, scale traffic, increase revenue fast.</p>
+            <a href="#" class="read-more">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- Card #3 -->
+        <div class="marketing-card">
+          <img src="./resources/image 20.svg" alt="Brand Expansion" />
+          <div class="marketing-card-content">
+            <h4>Brand Expansion</h4>
+            <p>Create awareness, trust and long-term retention advantage.</p>
+            <a href="#" class="read-more">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- GREETING SECTION -->
+    <section class="greeting">
+      <h1>Ready to take your project to the next level?</h1>
+
+      <a class="btn btn-primary" href="#">Get Started</a>
+    </section>
     <!-- SCRIPT FULL -->
-    <script>
-      const btn = document.querySelector(".hamburger");
-      const mobileNav = document.querySelector(".mobile-nav");
-
-      btn.addEventListener("click", () => {
-        const isOpen = mobileNav.classList.contains("open");
-
-        if (!isOpen) {
-          mobileNav.classList.add("open");
-          mobileNav.style.maxHeight = mobileNav.scrollHeight + "px"; // плавное открытие
-          btn.setAttribute("aria-expanded", "true");
-          mobileNav.setAttribute("aria-hidden", "false");
-        } else {
-          mobileNav.style.maxHeight = "0px"; // плавное закрытие
-          mobileNav.classList.remove("open");
-          btn.setAttribute("aria-expanded", "false");
-          mobileNav.setAttribute("aria-hidden", "true");
-        }
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

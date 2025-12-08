@@ -1,11 +1,14 @@
 :root {
-  --secondary-text: #d9d9d9; /* светло-серый — как в фигме */
+  --primary-color: #34b53a; /* зелёный акцент */
+  --hero-bg-color: #f5f7fa; /* серый фон блоков */
+  --secondary-text: #d9d9d9; /* светло-серый */
 }
+
 /* ===== Separator ===== */
 .separator {
   border-bottom: 4px solid var(--secondary-text);
   width: 25%;
-  margin: 0px auto; /* сверху/снизу отступы — чтобы линия не прилипала */
+  margin: 0 auto;
   opacity: 0.8;
 }
 
@@ -13,6 +16,7 @@
 .clients {
   padding: 40px 0;
   text-align: center;
+  background: #fff; /* секция снова белая */
 }
 
 .section-title {
@@ -25,7 +29,7 @@
 .section-subtitle {
   font-size: 17px;
   color: #666;
-  max-width: 460px;
+  max-width: 900px;
   margin: 0 auto 30px;
 }
 
@@ -49,18 +53,18 @@
   transform: scale(1.07);
 }
 
-/*************** RESPONSIVE ***************/
 @media (max-width: 820px) {
   .clients-logos {
     width: 90vw;
     gap: 28px;
   }
 }
+
 /* ===== COMMUNITY SECTION ===== */
 .community {
   padding: 40px 0;
   text-align: center;
-  background: #fff;
+  background: #fff; /* тоже белым */
 }
 
 .community .section-title {
@@ -71,7 +75,7 @@
 }
 
 .community .section-title span {
-  color: #34b53a;
+  color: var(--primary-color);
 }
 
 .community .section-subtitle {
@@ -90,7 +94,7 @@
 /* --- Single card --- */
 .community-card {
   width: 300px;
-  background: #f5f7fa;
+  background: var(--hero-bg-color);
   padding: 32px 22px;
   border-radius: 12px;
   transition: 0.3s;
@@ -127,13 +131,14 @@
     gap: 24px;
   }
 }
+
 /* ===== SAME SECTION ===== */
 .same-section {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 60px 0;
+  padding: 60px 60px;
   gap: 20px;
 }
 
@@ -141,6 +146,12 @@
   flex: 40%;
   display: grid;
   place-content: center;
+}
+
+.same-section-img img {
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px;
 }
 
 .same-section-content {
@@ -152,7 +163,6 @@
   margin-bottom: 20px;
 }
 
-/* Заголовок и текст */
 .same-section-content h3 {
   font-size: 28px;
   font-weight: 700;
@@ -165,12 +175,206 @@
   line-height: 1.7;
 }
 
-/* --- Изображение --- */
-.same-section-img img {
-  width: 100%;
-  max-width: 400px;
-  min-width: 300px;
+/* ===== STATS SECTION ===== */
+.stats {
+  background-color: var(--hero-bg-color);
+  padding: 90px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px 80px;
+}
+
+/* Заголовок */
+.stats-first h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.stats-first h3 span {
+  color: var(--primary-color);
   display: block;
+}
+
+.stats-first p {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Карточки с цифрами */
+.stats-second {
+  max-width: 500px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1 1 180px;
+}
+
+.stat img {
+  width: 45px;
+}
+
+/* Ключевой момент — цифры НЕ зелёные */
+.stat h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.stat p {
+  font-size: 15px;
+  color: #666;
+}
+/* ===== MARKETING SECTION ===== */
+.marketing {
+  padding: 80px 0;
+  text-align: center;
+  background: #fff;
+}
+
+.marketing-content {
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.marketing .section-title {
+  color: #333;
+}
+
+.marketing .section-subtitle {
+  font-size: 17px;
+  color: #666;
+}
+
+/* cards wrapper */
+.marketing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* Single card */
+.marketing-card {
+  width: 300px;
+  background: var(--hero-bg-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+  transition: 0.35s ease;
+  position: relative;
+}
+
+.marketing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
+}
+
+/* Card Image */
+.marketing-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text inside card */
+.marketing-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.marketing-card-content h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.marketing-card-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.marketing-card-content .read-more {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+.marketing-card-content .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 820px) {
+  .marketing-cards {
+    flex-direction: column;
+    gap: 22px;
+  }
+  .marketing-card {
+    width: 90%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+/* ===== GREETING SECTION ===== */
+.greeting {
+  text-align: center;
+  background-color: var(--hero-bg-color); /* серый фон */
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: #2e2d2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.greeting h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.greeting .btn-primary {
+  padding: 12px 28px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.greeting .btn-primary:hover {
+  background-color: #2a9e33; /* чуть темнее при ховере */
+}
+
+/* Mobile */
+@media (max-width: 820px) {
+  .greeting h1 {
+    font-size: 26px;
+  }
+  .greeting p {
+    font-size: 16px;
+  }
 }
 
 /* Mobile */
@@ -179,9 +383,11 @@
     flex-direction: column;
     text-align: center;
   }
+
   .same-section-content {
     padding: 20px 10px;
   }
+
   .same-section-img img {
     max-width: 300px;
     min-width: 250px;
