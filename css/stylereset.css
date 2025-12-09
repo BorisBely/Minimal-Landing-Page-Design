@@ -15,5 +15,9 @@ body {
   font-family: sans-serif;
   background: #fff;
 }
+/* Global Font */
+* {
+  font-family: "Roboto Mono", monospace;
+}
 
 /* ===== Твои остальные стили ===== */

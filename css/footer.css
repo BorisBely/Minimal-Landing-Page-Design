@@ -1,0 +1,116 @@
+footer {
+  background-color: #2b3936;
+  padding: 60px 0;
+  color: white;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 40px 100px;
+  gap: 120px;
+}
+
+.footer-logo {
+  max-width: 600px;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
+.social-icons img {
+  width: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.social-icons img:hover {
+  opacity: 1;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 160px 160px 1fr; /* ← как в макете */
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.footer-col li:hover {
+  opacity: 1;
+}
+
+.footer-col.wide {
+  grid-column: span 1;
+}
+.footer-email-box {
+  position: relative;
+  width: 100%;
+}
+
+.footer-email-box input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  height: 45px;
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-right: 45px;
+  color: white;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.footer-email-box input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* кнопка-стрелка прозрачная */
+.email-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 45px;
+  width: 45px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.email-submit img {
+  width: 18px;
+  opacity: 0.8;
+  transition: 0.25s ease;
+}
+
+/* hover эффект как в фигме */
+.email-submit:hover img {
+  opacity: 1;
+  transform: translateX(2px);
+}
