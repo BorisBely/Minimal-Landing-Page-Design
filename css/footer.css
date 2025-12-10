@@ -1,116 +1,125 @@
-footer {
-  background-color: #2b3936;
-  padding: 60px 0;
-  color: white;
-}
-
-.footer-container {
-  width: 80%;
-  margin: 0 auto;
+.footer {
+  background-color: #263238;
   display: flex;
-  flex-flow: row wrap;
-  padding: 40px 100px;
-  gap: 120px;
+  flex-wrap: wrap;
+  padding: 60px 100px;
+  gap: 50px;
+  font-family: "Roboto Mono", monospace;
 }
 
-.footer-logo {
-  max-width: 600px;
+/* Общая стилистика */
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #fff;
 }
 
-.footer-logo p {
+/* Левый блок */
+.footer .first {
+  flex: 2;
+  gap: 25px;
+}
+
+.footer .first .logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.footer .first p {
   font-size: 0.9rem;
-  line-height: 1.4rem;
   opacity: 0.8;
-  margin: 10px 0;
+}
+.footer .first p span {
+  display: block;
 }
 
-.social-icons img {
-  width: 30px;
-  margin-right: 10px;
+/* Соц-сети */
+.social i {
+  font-size: 1.3rem;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin-right: 6px;
   cursor: pointer;
-  opacity: 0.8;
+  transition: 0.25s;
 }
-.social-icons img:hover {
-  opacity: 1;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: 160px 160px 1fr; /* ← как в макете */
-  gap: 40px;
-  align-items: start;
+.social i:hover {
+  background: #4caf4f;
 }
 
-.footer-col h3 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  font-weight: 600;
+/* Колонки */
+.second,
+.third {
+  flex: 1;
 }
 
-.footer-col ul {
-  list-style: none;
+.footer h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
-.footer-col li {
-  font-size: 0.9rem;
-  margin-bottom: 8px;
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer li {
   opacity: 0.8;
   cursor: pointer;
 }
-
-.footer-col li:hover {
+.footer li:hover {
   opacity: 1;
+  color: #4caf4f;
 }
 
-.footer-col.wide {
-  grid-column: span 1;
-}
-.footer-email-box {
-  position: relative;
-  width: 100%;
+/* Email блок */
+.fourth {
+  flex: 1;
 }
 
-.footer-email-box input {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  height: 45px;
-  border-radius: 6px;
-  padding-left: 15px;
-  padding-right: 45px;
-  color: white;
-  outline: none;
-  font-size: 0.9rem;
-}
-
-.footer-email-box input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-/* кнопка-стрелка прозрачная */
-.email-submit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 45px;
-  width: 45px;
-  background: transparent;
-  border: none;
+.email-form {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 14px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+}
+
+.email-form input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  flex: 1;
+}
+.email-form input:focus {
+  outline: none;
+}
+
+.email-form i {
+  font-size: 1.1rem;
+  opacity: 0.9;
   cursor: pointer;
-  transition: 0.25s ease;
+  transition: 0.25s;
+}
+.email-form i:hover {
+  color: #4caf4f;
 }
 
-.email-submit img {
-  width: 18px;
-  opacity: 0.8;
-  transition: 0.25s ease;
+/* Нижняя полоса */
+.my-footer {
+  background: #263238;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 12px;
 }
-
-/* hover эффект как в фигме */
-.email-submit:hover img {
-  opacity: 1;
-  transform: translateX(2px);
+.my-footer h3 {
+  font-size: 0.8rem;
+  color: #fff;
+}
+.my-footer a {
+  color: #4caf4f;
+  text-decoration: underline;
 }
